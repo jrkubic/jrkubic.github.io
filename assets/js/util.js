@@ -470,6 +470,7 @@
 							switch (this.type) {
 
 								case 'submit':
+									console.log("Submit Clicked", i);
 								case 'reset':
 									break;
 
