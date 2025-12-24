@@ -71,8 +71,12 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
-
+.image {
+	height: 200px;
+}
 /* Basic */
+
+	
 
 	html {
 		box-sizing: border-box;
