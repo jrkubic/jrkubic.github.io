@@ -3321,5 +3321,5 @@ input, select, textarea {
 	}
 
 	#chicken .image.slim {
-		max-width: 200px;
+		max-height: 200px;
 	}
