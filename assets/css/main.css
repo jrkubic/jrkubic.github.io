@@ -71,9 +71,6 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
-.image {
-	height: 20vh;
-}
 /* Basic */
 
 	
@@ -3317,4 +3314,8 @@ input, select, textarea {
 				padding: 0;
 			}
 
+	}
+
+	#chicken .image.fit {
+		max-width: 350px;
 	}
