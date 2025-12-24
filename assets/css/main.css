@@ -3319,3 +3319,7 @@ input, select, textarea {
 	#chicken .image.fit {
 		max-width: 350px;
 	}
+
+	#chicken .image.slim {
+		max-width: 200px;
+	}
