@@ -156,4 +156,33 @@
 			}
 		});
 
+	// Formspree AJAX Submission
+		$('form[action*="formspree.io"]').on('submit', function(e) {
+			e.preventDefault();
+			var $form = $(this);
+			var $submit = $form.find('input[type="submit"]');
+			var defaultSubmitText = $submit.val();
+
+			$submit.prop('disabled', true).val('Sending...');
+
+			$.ajax({
+				url: $form.attr('action'),
+				method: 'POST',
+				data: $form.serialize(),
+				dataType: 'json'
+			}).done(function() {
+				$form[0].reset();
+				$submit.val('Message Sent!');
+				setTimeout(function() {
+					$submit.prop('disabled', false).val(defaultSubmitText);
+				}, 3000);
+			}).fail(function() {
+				$submit.val('Error!');
+				setTimeout(function() {
+					$submit.prop('disabled', false).val(defaultSubmitText);
+				}, 3000);
+				alert('Oops! There was a problem submitting your form.');
+			});
+		});
+
 })(jQuery);
