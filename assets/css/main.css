@@ -3323,3 +3323,19 @@ input, select, textarea {
 	#chicken .image.slim {
 		max-width: 350px;
 	}
+
+/* Required Field Star */
+	.required-field-container {
+		position: relative;
+	}
+	.required-star {
+		color: #ff0000;
+		position: absolute;
+		right: 1em;
+		top: 50%;
+		transform: translateY(-50%);
+		pointer-events: none;
+	}
+	textarea + .required-star {
+		top: 1.5em;
+	}
