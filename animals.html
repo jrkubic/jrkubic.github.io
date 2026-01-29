@@ -8,6 +8,56 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Carousel Styles */
+			.carousel-container {
+				position: relative;
+				max-width: 100%;
+				margin: 2em 0;
+				overflow: hidden;
+				border-radius: 4px;
+			}
+			.carousel-slide {
+				display: none;
+				width: 100%;
+			}
+			.carousel-slide.active {
+				display: block;
+				animation: fadeEffect 1s;
+			}
+			.carousel-slide img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+			.prev, .next {
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				width: auto;
+				padding: 16px;
+				margin-top: -22px;
+				color: white;
+				font-weight: bold;
+				font-size: 18px;
+				transition: 0.6s ease;
+				border-radius: 0 3px 3px 0;
+				user-select: none;
+				background-color: rgba(0,0,0,0.3);
+				border: none;
+			}
+			.next {
+				right: 0;
+				border-radius: 3px 0 0 3px;
+			}
+			.prev:hover, .next:hover {
+				background-color: rgba(0,0,0,0.8);
+			}
+			@keyframes fadeEffect {
+				from {opacity: .4}
+				to {opacity: 1}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<section id="header">
@@ -39,6 +89,19 @@
 							<h2>Animal Services</h2>
 							<p>Peace of mind for the farm while you’re away.</p>
 						</header>
+
+						<!-- Carousel -->
+						<div class="carousel-container">
+							<div class="carousel-slide active">
+								<img src="images/animals/DJI_0061.JPG" alt="Farm View">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/riverpic.jpg" alt="River View">
+							</div>
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+						</div>
+
 						<p>I offer specialized care for your animals, combining years of hands-on experience with modern reliability. Whether you have domestic pets or a barn full of livestock, I provide the "boots on the ground" care they need.</p>
 						
 						<h3>Service Tiers</h3>
@@ -55,17 +118,17 @@
 									<tr>
 										<td>Standard Domestic</td>
 										<td>Feeding, water, play, litter/coop cleaning.</td>
-										<td>Dogs, cats, backyard chickens.</td>
+										<td>Dogs, cats, chickens, etc</td>
 									</tr>
 									<tr>
 										<td>Equine/Livestock</td>
 										<td>Turnout, fence checks, mucking stalls, grain/hay, water troughs.</td>
-										<td>Horses, Cattle, Donkeys, Sheep.</td>
+										<td>Horses, Donkeys, Sheep.</td>
 									</tr>
 									<tr>
 										<td>Overnight Farm Stays</td>
 										<td>I work remotely from your home to provide constant presence.</td>
-										<td>Senior animals, medication needs, security.</td>
+										<td>Senior animals, medication needs, peace-of-mind.</td>
 									</tr>
 								</tbody>
 							</table>
@@ -117,5 +180,26 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("carousel-slide");
+				if (n > slides.length) {slideIndex = 1}
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+					slides[i].className = slides[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";
+				slides[slideIndex-1].className += " active";
+			}
+		</script>
 	</body>
 </html>
