@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Jonathan "Jake" Kubicki — Platform Engineer</title>
 	<meta charset="utf-8" />
+	<title>Jonathan "Jake" Kubicki — Platform Engineer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="Jonathan 'Jake' Kubicki — platform engineer building real-time, scalable systems. Projects, work highlights, papers, and software services." />
 	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230d1117'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%233fb950' font-family='monospace'%3E%26gt;_%3C/text%3E%3C/svg%3E" />
@@ -12,13 +12,13 @@
 	<link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-	<a class="skip-link" href="#about">Skip to content</a>
+	<a class="skip-link" href="#intro">Skip to content</a>
 
 	<nav class="site-nav" aria-label="Main">
 		<div class="container">
 			<a class="brand" href="#"><span class="prompt">jake@kubicki</span>:~$</a>
-			<button class="nav-toggle" aria-label="Toggle navigation">menu</button>
-			<ul class="nav-links">
+			<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">menu</button>
+			<ul class="nav-links" id="nav-menu">
 				<li><a href="#about">about</a></li>
 				<li><a href="#projects">projects</a></li>
 				<li><a href="#work">work</a></li>
@@ -29,7 +29,7 @@
 		</div>
 	</nav>
 
-	<header class="hero">
+	<header class="hero" id="intro">
 		<div class="container">
 			<div class="term">
 				<div class="term-bar">
@@ -155,18 +155,18 @@
 				<p>Always interested in new opportunities and meeting new people — don't hesitate to reach out.</p>
 				<form method="post" action="https://formspree.io/f/xrbkwdla">
 					<div class="form-row">
-						<input type="text" name="name" placeholder="Name *" required />
-						<input type="email" name="email" placeholder="Email *" required />
+						<input type="text" name="name" placeholder="Name *" aria-label="Name" required />
+						<input type="email" name="email" placeholder="Email *" aria-label="Email" required />
 					</div>
 					<div class="form-row">
-						<input type="text" name="phone" placeholder="Phone" />
-						<input type="text" name="company" placeholder="Company" />
+						<input type="tel" name="phone" placeholder="Phone" aria-label="Phone" />
+						<input type="text" name="company" placeholder="Company" aria-label="Company" />
 					</div>
 					<div class="form-row single">
-						<input type="text" name="subject" placeholder="Subject *" value="General Inquiry: " required />
+						<input type="text" name="subject" placeholder="Subject *" value="General Inquiry: " aria-label="Subject" required />
 					</div>
 					<div class="form-row single">
-						<textarea name="message" placeholder="Message *" rows="6" required></textarea>
+						<textarea name="message" placeholder="Message *" aria-label="Message" rows="6" required></textarea>
 					</div>
 					<button class="btn primary" type="submit">./send-message</button>
 				</form>
