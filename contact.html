@@ -1,85 +1,62 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Contact - Jonathan Kubicki</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-		<section id="header">
-			<header>
-				<span class="image avatar"><img src="images/chickenpic.jpg" alt="" /></span>
-				<h1 id="logo"><a href="index.html">Jonathan Kubicki</a></h1>
-			</header>
-			<nav id="nav">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="contact.html" class="active">Contact</a></li>
-				</ul>
-			</nav>
-			<footer>
-				<ul class="icons">
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-			</footer>
-		</section>
-		<div id="wrapper">
-			<div id="main">
-				<section id="contact">
-					<div class="container">
-						<h3>Contact Me</h3>
-						<p>I'm always interested to new opportunities and meeting new people. Don't hesistate to reach out!</p>
-						<form method="post" action="https://formspree.io/f/xrbkwdla">
-							<div class="row gtr-uniform">
-								<div class="col-6 col-12-xsmall">
-									<div class="required-field-container">
-										<input type="text" name="name" id="name" placeholder="Name" required />
-										<span class="required-star">*</span>
-									</div>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<div class="required-field-container">
-										<input type="email" name="email" id="email" placeholder="Email" required />
-										<span class="required-star">*</span>
-									</div>
-								</div>
-								<div class="col-6 col-12-xsmall"><input type="text" name="phone" id="phone" placeholder="Phone" /></div>
-								<div class="col-6 col-12-xsmall"><input type="text" name="company" id="company" placeholder="Company" /></div>
-								<div class="col-12">
-									<div class="required-field-container">
-										<input type="text" name="subject" id="subject" placeholder="Subject" value="General Inquiry: " required />
-										<span class="required-star">*</span>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="required-field-container">
-										<textarea name="message" id="message" placeholder="Message" rows="6" required></textarea>
-										<span class="required-star">*</span>
-									</div>
-								</div>
-								<div class="col-12">
-									<ul class="actions">
-										<li><input type="submit" class="primary" value="Send Message" /></li>
-										<li><input type="reset" value="Reset Form" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</div>
-				</section>
-			</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Contact — Jonathan Kubicki</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Contact Jonathan 'Jake' Kubicki." />
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230d1117'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%233fb950' font-family='monospace'%3E%26gt;_%3C/text%3E%3C/svg%3E" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+	<nav class="site-nav" aria-label="Main">
+		<div class="container">
+			<a class="brand" href="index.html"><span class="prompt">jake@kubicki</span>:~$</a>
+			<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">menu</button>
+			<ul class="nav-links" id="nav-menu">
+				<li><a href="index.html">home</a></li>
+				<li><a href="index.html#projects">projects</a></li>
+				<li><a href="software.html">services</a></li>
+				<li><a href="contact.html" class="active">contact</a></li>
+			</ul>
 		</div>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
+	</nav>
+
+	<main>
+		<section>
+			<div class="container">
+				<h2 class="sec-title"><span class="prompt">$</span> ./contact</h2>
+				<p>Always interested in new opportunities and meeting new people — don't hesitate to reach out.</p>
+				<form method="post" action="https://formspree.io/f/xrbkwdla">
+					<div class="form-row">
+						<input type="text" name="name" placeholder="Name *" aria-label="Name" required />
+						<input type="email" name="email" placeholder="Email *" aria-label="Email" required />
+					</div>
+					<div class="form-row">
+						<input type="tel" name="phone" placeholder="Phone" aria-label="Phone" />
+						<input type="text" name="company" placeholder="Company" aria-label="Company" />
+					</div>
+					<div class="form-row single">
+						<input type="text" name="subject" placeholder="Subject *" value="General Inquiry: " aria-label="Subject" required />
+					</div>
+					<div class="form-row single">
+						<textarea name="message" placeholder="Message *" aria-label="Message" rows="6" required></textarea>
+					</div>
+					<button class="btn primary" type="submit">./send-message</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>&copy; 2026 Jonathan Kubicki · <a href="index.html">back to home</a></p>
+		</div>
+	</footer>
+
+	<script src="assets/js/site.js"></script>
+</body>
 </html>
