@@ -36,6 +36,7 @@
 					<span class="term-title">jake@kubicki: ~</span>
 				</div>
 				<div class="term-body">
+					<div class="term-main">
 					<p class="term-line"><span class="prompt">$</span> whoami</p>
 					<h1>Jonathan "Jake" Kubicki</h1>
 					<p class="subtitle">Software Engineer — real-time, scalable systems</p>
@@ -61,6 +62,13 @@
 						<a class="btn" href="#contact">./hire-me</a>
 					</div>
 					<p class="term-line"><span class="prompt">$</span> <span class="cursor"></span></p>
+					</div>
+					<aside class="term-koi" aria-label="My GitHub koi">
+						<p class="term-line"><span class="prompt">$</span> cat koi.gif</p>
+						<!-- Drawn nightly by git-koi in github.com/jrkubic/jrkubic; hot-linked so it stays current without a second workflow. -->
+						<a href="https://github.com/jrkubic" title="My GitHub profile"><img src="https://raw.githubusercontent.com/jrkubic/jrkubic/main/koi/koi.gif" width="256" height="256" alt="A pixel-art koi, redrawn every night from my GitHub activity" loading="eager" decoding="async" onerror="this.closest('.term-koi').hidden = true"></a>
+						<p class="koi-caption"># redrawn nightly from my GitHub activity via <a href="https://github.com/yalongwastaken/git-koi">git-koi</a></p>
+					</aside>
 				</div>
 			</div>
 		</div>
@@ -79,6 +87,24 @@
 			<div class="container">
 				<h2 class="sec-title"><span class="prompt">$</span> ls projects/</h2>
 				<div class="card-grid">
+					<article class="card">
+						<h3><a href="https://github.com/jrkubic/kroger-reorder">kroger-reorder</a><span class="badge">v6.2</span></h3>
+						<p>Self-hosted web app that fills a Kroger pickup cart from saved grocery lists in one click. Snap a fridge photo or paste a recipe URL and Claude suggests what to add; CSV import/export, order history, Docker image, 270 tests, CI on three OSes.</p>
+						<ul class="tags"><li>Python</li><li>FastAPI</li><li>Kroger API</li><li>Claude API</li><li>Docker</li></ul>
+						<div class="card-links"><a href="https://github.com/jrkubic/kroger-reorder">source ↗</a><a href="https://github.com/jrkubic/kroger-reorder#screenshots">screenshots ↗</a></div>
+					</article>
+					<article class="card">
+						<h3><a href="https://github.com/jrkubic/firstPersonSandbox">good-chef</a><span class="badge">in development</span></h3>
+						<p>PEAK-style first-person co-op cooking game: physics-driven grabbing, cooking, plating and delivery, with host-authoritative Steam lobbies for up to four chefs, rebindable controls, and a 140-check headless smoke test.</p>
+						<ul class="tags"><li>Godot</li><li>GDScript</li><li>GodotSteam</li><li>Multiplayer</li></ul>
+						<div class="card-links"><a href="https://github.com/jrkubic/firstPersonSandbox">source ↗</a></div>
+					</article>
+					<article class="card">
+						<h3><a href="https://github.com/jrkubic/vampire-survivors-ai">vampire-survivors-ai</a></h3>
+						<p>Pygame Vampire Survivors clone played autonomously by a locally run LLM. Stages move from structured JSON state to screenshots and a vision model, with per-decision logging, replays, and a formal performance analysis.</p>
+						<ul class="tags"><li>Python</li><li>Pygame</li><li>Ollama</li><li>LLM Agents</li></ul>
+						<div class="card-links"><a href="https://github.com/jrkubic/vampire-survivors-ai">source ↗</a></div>
+					</article>
 					<article class="card">
 						<h3>movie-board-sync</h3>
 						<p>Automated pipeline that syncs my Real-Debrid watch activity into a Google Sheets dashboard — 137+ titles tracked and enriched, hands-free.</p>

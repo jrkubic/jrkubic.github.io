@@ -111,6 +111,19 @@ img { max-width: 100%; }
 .hero-links svg { width: 18px; height: 18px; fill: currentColor; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.35rem; }
 
+/* koi pane: drawn nightly by git-koi, hot-linked from the profile repo */
+.term-body { display: flex; gap: 1.5rem 2.5rem; align-items: flex-start; flex-wrap: wrap; }
+.term-main { flex: 1 1 24rem; min-width: 0; }
+.term-koi { flex: 0 0 auto; margin-left: auto; text-align: center; }
+.term-koi .term-line { margin-top: 0.9rem; text-align: left; }
+.term-koi img {
+  display: block; width: 256px; max-width: 100%; height: auto;
+  image-rendering: pixelated; image-rendering: crisp-edges;
+}
+.koi-caption { font-family: var(--mono); font-size: 0.72rem; color: var(--text-dim); margin-top: 0.35rem; max-width: 256px; text-align: left; }
+.koi-caption a { color: var(--text-dim); text-decoration: underline dotted; }
+.koi-caption a:hover { color: var(--accent); }
+
 .cursor {
   display: inline-block; width: 0.55em; height: 1.1em;
   background: var(--accent); vertical-align: text-bottom;
@@ -229,6 +242,9 @@ textarea { resize: vertical; }
   .nav-links a { display: block; padding: 0.8rem 1.25rem; }
   .form-row { grid-template-columns: 1fr; }
   .term-body { padding: 1.2rem 1.1rem 1.4rem; }
+  .term-koi { margin-left: 0; }
+  .term-koi img { width: 192px; }
+  .koi-caption { max-width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
